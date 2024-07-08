@@ -1,0 +1,42 @@
+.App{
+    display: flex;
+    flex-flow: column nowrap;
+    gap:2em;
+    width: 100%;
+    max-width: 20em;
+}
+
+.box{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+}
+.wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 0.4em;
+    padding: 1.5em 1em;
+    border: 0.125em solid aqua;
+}
+.question{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+}
+.answer{
+    padding: 0 0 0 1.75em;
+}
+
+
+button{
+    background: none;
+    border: 0.125em solid rgb(255, 239, 254);
+    color: tan;
+    padding: 1.25em 1em;
+    font-family: nothing, monospace;
+    font-size: 1.4em;
+    font-weight: 700;
+    width: 100%;
+    max-width: 20em;
+}

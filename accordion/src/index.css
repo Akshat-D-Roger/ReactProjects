@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body{
+    background-color: #242424;
+    min-height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: nothing, monospace ;
+    color:rgb(255, 239, 254);
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+@font-face {
+    font-family: nothing;
+    src: url("..\ndot-47-inspired-by-nothing.otf") format("opentype");
+}
