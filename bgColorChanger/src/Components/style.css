@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.main{
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap:2em;
+}
+
+.buttonWrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+}
+
+.button{
+    cursor:pointer;
+    color:#FFF;
+    width: 16em;
+    font-family:Verdana, Geneva, sans-serif;
+    border: 0.5em solid black;
+    padding: 2em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(104, 175, 238, 1);
+    border-radius: 10px; 
+    transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .button:hover {
+    opacity: 0.6;
+    transform: translateY(-5px);
+    }
+
+    .textWrapper {
+        font-size: 6em;
+    }
