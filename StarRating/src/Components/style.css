@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(124, 212, 234);
+}
+.star{
+    border: 3px solid black;
+    font-size: 5em;
+    color: whitesmoke;
+    padding: 0.25em;
+}
+
+.active{
+    stroke: rgb(255, 153, 218);
+    background-color: black;
+}
