@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { LoadMore } from "./components/LoadMore";
 
 export function App(){
