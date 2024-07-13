@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100svh;
+    max-width: 100%;
+    padding: 1em;
+}
+
+.container{
+    height: 35svh;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button{
+    cursor: pointer;
+    flex: 0 0 0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(199, 193, 193, 0.5);
+}
+
+.Button:hover{
+    opacity: 0.6;
+    background-color: white;
+}
+
+#prev{
+    position: absolute;
+    left: 0;
+}
+#next{
+    position:  absolute;
+    right: 0;
+}
+
+.arrowIcon{
+    font-size: 2em;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hidden{
+    display: none;
+}
+
+.circles{
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    bottom: 0.5rem;
+    color: antiquewhite;
+    background-color: rgba(75, 69, 69, 0.526);
+    padding: 0em 0em;
+}
+
+.dot{
+    color: antiquewhite;
+    height: 2em;
+    width: 2em;
+}
+
+.dot:hover{
+    color: rgb(0, 255, 255);
+}
+
+.selected{
+    color: rgb(252, 248, 4);
+}
