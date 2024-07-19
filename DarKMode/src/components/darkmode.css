@@ -1,0 +1,51 @@
+:root{
+    --bg-color: #ffe9d9;
+    --text-color: #000000;
+    --button-text-color: #ffffff;
+    --button-bg-color: #000000;
+    --button-border-color: #ffffff;
+}
+
+
+[data-mode='dark']{
+    --bg-color: #092115;
+    --text-color: #ffffff;
+    --button-text-color: #000000;
+    --button-bg-color: #ffffff;
+    --button-border-color: #000000;
+}
+
+.container{
+    min-height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    gap: 3rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.5s ease-in-out;
+}
+
+
+.child1{
+    font-size: 5rem;
+    margin-top: 15vh;
+    margin-left: 8vw;
+    width: fit-content;
+}
+
+.child2{
+    margin-left: 8vw;
+    width: fit-content;
+}
+
+.button{
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: 10px solid var(--button-border-color);
+    color: var(--button-text-color);
+    background-color: var(--button-bg-color);
+}

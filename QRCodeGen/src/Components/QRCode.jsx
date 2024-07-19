@@ -16,7 +16,7 @@ export function QRCode()
         <div>
             <div>
                 <div>
-                    <input value={input1} onChange={(e)=>(setInput1(e.target.value))}></input>
+                    <input type="text" value={input1} onChange={(e)=>(setInput1(e.target.value))}></input>
                 </div>
                 <div>
                     <button onClick={onclickHandler}>beware pressing this generates a qr code</button>
