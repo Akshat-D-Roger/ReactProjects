@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100svh;
+    width: 100%;
+    padding: 1.5vh;
+    gap: 1.5vh;
+}
+
+.scroll{
+    height: 10%;
+    width: 100%;
+    background-color: bisque;
+    flex-shrink: 0;
+    padding: 1.15rem;
+}
+
+
+.container{
+    width: 100%;
+    background-color: black;
+    padding: 1rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.imageContainer{
+    display: grid;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 1rem;
+    row-gap: 2.3vh;
+    /* overflow-y: scroll; */
+}
+
+.productContainer{
+    height: 40vh;
+    background-color: white;
+}
