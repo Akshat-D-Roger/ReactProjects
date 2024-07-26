@@ -1,0 +1,24 @@
+.header{
+    display: flex;
+    height: 100svh;
+    width: 100%;
+    border: 2rem solid white;
+    box-sizing: border-box;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    background-color: rgb(137, 255, 216);
+}
+.section{
+    height: 100svh;
+    width: 100%;
+    background-color: black;
+    box-sizing: border-box;
+    border: 2rem solid white;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
