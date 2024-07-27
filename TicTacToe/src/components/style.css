@@ -1,0 +1,36 @@
+.parent{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    height: 100svh;
+    width: 100%;
+    color: aquamarine;
+    gap: 5rem;
+}
+
+.tictactoe{
+    display: grid;
+    grid-template-columns: 7rem 7rem 7rem;
+}
+
+.cells{
+    border: 2px dotted grey;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    transition: all 0.2s ease-out;
+}
+
+.cells:hover{
+    background-color: grey;
+}
+
+
+.result{
+    font-size: 7rem;
+}
