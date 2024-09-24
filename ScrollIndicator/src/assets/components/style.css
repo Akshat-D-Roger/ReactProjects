@@ -39,7 +39,7 @@
     grid-template-columns: auto auto auto auto;
     column-gap: 1rem;
     row-gap: 2.3vh;
-    /* overflow-y: scroll; */
+    /* overflow-y: auto; */
 }
 
 .productContainer{
