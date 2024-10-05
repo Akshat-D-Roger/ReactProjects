@@ -1,4 +1,5 @@
-import { cartDataSelector, cartItemsAtom, deleteProduct, itemQuantityHandler } from "../store/atoms/cart"
+import { cartDataSelector, cartItemsAtom } from "../store/atoms/cart"
+import { deleteProduct, itemQuantityHandler } from "../store/cartChanges";
 import { useRecoilState, useRecoilValue } from "recoil"
 import { assets } from "../assets/assets";
 import { ToastContainer } from "react-toastify";
