@@ -1,0 +1,6 @@
+BCRYPT: 
+salt = await bcrypt.genSalt(10) --> hashedPwd = await bcrypt.hash(password, salt)
+
+JWT
+let jwt = jwt.sign({id}, jwt_key)
+let id = jwt.verify()

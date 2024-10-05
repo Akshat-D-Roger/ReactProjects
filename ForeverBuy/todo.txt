@@ -1,0 +1,3 @@
+1. in userController after parsing the req body and coercing them into strings, use them instead of using req body
+2. addProducts function in productController so that admin can add products (would have to use mutler to have images in req body)
+3. About us page on frontend
