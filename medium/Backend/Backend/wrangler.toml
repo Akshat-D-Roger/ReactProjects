@@ -1,0 +1,31 @@
+name = "medium-backend"
+main = "src/index.ts"
+compatibility_date = "2024-10-09"
+compatibility_flags = [ "nodejs_compat" ]
+
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZmU3Mzk2OTItYWM5NS00YTc1LWI4NDAtZmQ5MDc2OGFmOTFkIiwidGVuYW50X2lkIjoiMTAyMThiNWQyMGY0MGQ4ZmNhOTE5MWEzNjBiMGMxYzllMzFhMWQxM2RmYWM2NTRkN2MwZGU0ZjBhNTIzZWRjZiIsImludGVybmFsX3NlY3JldCI6ImY5ZmM1M2Q5LTVjNTMtNDlhZi1iNTUxLWMyZmM3MGY0MjVmMyJ9.JG0xCvfIF7HpNmK18nIkiPYubSA9p3TDx9tt4K7qVWg"
+DIRECT_URL="postgresql://neondb_owner:zQg9auFrq0Wy@ep-morning-dew-a5dyjn2i.us-east-2.aws.neon.tech/neondb?sslmode=require"
+JWT_SECRET="akshat2312"
+
+# [vars]
+# MY_VAR = "my-variable"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
+
+# [observability]
+# enabled = true
+# head_sampling_rate = 1
