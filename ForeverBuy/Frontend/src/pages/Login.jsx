@@ -27,7 +27,7 @@ const Login = () => {
     let email = formData.get('email');
     let password = formData.get('password');
     if(loginOrRegister==='Login'){
-      let res = await axios.post('http://localhost:4000/api/user/login', {email, password});
+      let res = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/api/user/login`, {email, password});
       if(res.data.success){
         let token = res.data.token;
         localStorage.setItem('token', JSON.stringify(token))
@@ -41,7 +41,7 @@ const Login = () => {
     }
     else{
       let name = formData.get('name')
-      let res = await axios.post('http://localhost:4000/api/user/register', {name, email, password})
+      let res = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/api/user/register`, {name, email, password})
       if(res.data.success){
         let token = res.data.token;
         localStorage.setItem('token', JSON.stringify(token))

@@ -18,9 +18,11 @@ async function addToCart(id, selectedSize, currProduct, setSelectedSize, cartIte
       cartItemsCopy[id][selectedSize] = 1;
       (cartItemsCopy[id]).productDetails = currProduct;
     }
+    setCartItems(cartItemsCopy);
+    setSelectedSize('');
     if(isLogin){
       try{
-        let res = await axios.put(`${import.meta.env.VITE_APP_BACKEND_URL}api/cart/update`, {data:{cartItems:cartItemsCopy}},{headers:{token}});
+        let res = await axios.put(`${import.meta.env.VITE_APP_BACKEND_URL}/api/cart/update`, {data:{cartItems:cartItemsCopy}},{headers:{token}});
         if(!res.data.success){
           toast.error(res.data.message);
           return;
@@ -31,8 +33,6 @@ async function addToCart(id, selectedSize, currProduct, setSelectedSize, cartIte
         return;
       }
     }
-    setCartItems(cartItemsCopy);
-    setSelectedSize('');
   }
   
   async function deleteProduct(item, cartItems, setCartItems, isLogin, token) {
@@ -44,9 +44,10 @@ async function addToCart(id, selectedSize, currProduct, setSelectedSize, cartIte
     if(Object.keys(cartItemsCopy[item.id]).length===1){
       delete cartItemsCopy[item.id];
     }
+    setCartItems(cartItemsCopy)
     if(isLogin){
       try{
-        let res = await axios.put(`${import.meta.env.VITE_APP_BACKEND_URL}api/cart/update`, {data:{cartItems:cartItemsCopy}},{headers:{token}});
+        let res = await axios.put(`${import.meta.env.VITE_APP_BACKEND_URL}/api/cart/update`, {data:{cartItems:cartItemsCopy}},{headers:{token}});
         if(!res.data.success){
           toast.error(res.data.message);
           return;
@@ -57,7 +58,6 @@ async function addToCart(id, selectedSize, currProduct, setSelectedSize, cartIte
         return;
       }
     }
-    setCartItems(cartItemsCopy)
   }
   
   async function itemQuantityHandler(event, id, size, cartItems, setCartItems, isLogin, token) {
@@ -70,9 +70,10 @@ async function addToCart(id, selectedSize, currProduct, setSelectedSize, cartIte
   
     let cartItemsCopy = JSON.parse(JSON.stringify(cartItems));
     cartItemsCopy[id][size] = quantity;
+    setCartItems(cartItemsCopy);
     if(isLogin){
       try{
-        let res = await axios.put(`${import.meta.env.VITE_APP_BACKEND_URL}api/cart/update`, {data:{cartItems:cartItemsCopy}},{headers:{token}});
+        let res = await axios.put(`${import.meta.env.VITE_APP_BACKEND_URL}/api/cart/update`, {data:{cartItems:cartItemsCopy}},{headers:{token}});
         if(!res.data.success){
           toast.error(res.data.message);
           return;
@@ -83,7 +84,6 @@ async function addToCart(id, selectedSize, currProduct, setSelectedSize, cartIte
         return;
       }
     }
-    setCartItems(cartItemsCopy);
   }
 
   export {addToCart, deleteProduct, itemQuantityHandler}

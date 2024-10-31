@@ -17,7 +17,7 @@ export default function useInitialise(){
 
     async function getProductsFromBackend(){
         try{
-            let res = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}api/product/list`);
+            let res = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/api/product/list`);
             if(!res.data.success){
                 console.log(res.data.message);
             }
@@ -51,7 +51,7 @@ export default function useInitialise(){
 
     async function getCartItemsFromBackend(){
         try{
-            let res = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}api/cart/get`, {headers:{token}});
+            let res = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/api/cart/get`, {headers:{token}});
             if(!res.data.success){
                 if(res.data.message==='not able to fetch cart right now'){
                     console.log(res.data.message)

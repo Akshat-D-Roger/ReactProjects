@@ -4,15 +4,15 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
-import { connectToDb } from './config/database.js';
-import { connectToCloudinary } from './config/cloudinary.js';
-import { userRouter } from './routes/userRouter.js';
-import { productRouter } from './routes/productRoutes.js';
-import { cartRouter } from './routes/cartRoutes.js';
+import { connectToDb } from '../config/database.js';
+import { connectToCloudinary } from '../config/cloudinary.js';
+import { userRouter } from '../routes/userRouter.js';
+import { productRouter } from '../routes/productRoutes.js';
+import { cartRouter } from '../routes/cartRoutes.js';
 dotenv.config()
 
 const app = express();  
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
 connectToDb();
 connectToCloudinary();
 
@@ -23,4 +23,6 @@ app.use('/api/user', userRouter)
 app.use('/api/product', productRouter)
 app.use('/api/cart', cartRouter)
 
-app.listen(port, ()=>{console.log('listening on port '+ port)}) 
+// app.listen(port, ()=>{console.log('listening on port '+ port)}) 
+
+export default app

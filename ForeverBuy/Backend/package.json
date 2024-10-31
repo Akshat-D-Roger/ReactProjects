@@ -5,14 +5,17 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vercel-build":"echo hello",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@prisma/client": "^5.19.1",
+    "@prisma/client": "^5.21.1",
+    "@prisma/extension-accelerate": "^1.2.1",
     "bcrypt": "^5.1.1",
     "cloudinary": "^2.5.0",
     "cors": "^2.8.5",
@@ -25,6 +28,5 @@
   },
   "type": "module",
   "devDependencies": {
-    "prisma": "^5.19.1"
   }
 }
