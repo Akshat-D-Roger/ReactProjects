@@ -17,6 +17,7 @@ export default function useInitialise(){
 
     async function getProductsFromBackend(){
         try{
+            console.log(import.meta.env.VITE_APP_BACKEND_URL)
             let res = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/api/product/list`);
             if(!res.data.success){
                 console.log(res.data.message);
