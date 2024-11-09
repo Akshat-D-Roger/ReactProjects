@@ -84,7 +84,20 @@ async function getBlog(c:Context<Env>){
     //get blog from db
     try{
         let blog = await prisma.post.findUnique({
-            where:{id:blogId}
+            where:{id:blogId},
+            select:{
+                id:true,
+                title:true,
+                content:true,
+                published:true,
+                createdAt:true,
+                authorId:true,
+                author:{
+                    select:{
+                        name:true
+                    }
+                }
+            }
         })
         if(!blog){
             //blog does not exist

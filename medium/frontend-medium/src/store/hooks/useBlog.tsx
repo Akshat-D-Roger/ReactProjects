@@ -22,7 +22,6 @@ export function useBlog({id}:{id:string}){
             const headers = token?{token}:{}
             const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/blog/${id}`, {headers});
             if(res.data.success){
-                console.log(res.data.blog)
                 setBlogData(res.data.blog);
             }
         }

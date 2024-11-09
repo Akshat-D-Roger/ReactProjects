@@ -11,7 +11,6 @@ export function usePublishedBlogs(){
         setLoading(true);
         try{
             const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/blog/publishedBlogs`);
-            console.log(res);
             if(res.data.success){
                 setBlogs(res.data.blogs)
             }
