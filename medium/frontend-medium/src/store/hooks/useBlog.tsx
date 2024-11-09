@@ -5,18 +5,11 @@ import { useRecoilState, useResetRecoilState } from "recoil";
 import { isLoginAtom, signout, tokenAtom, userAtom } from "../atom/login";
 import { useNavigate } from "react-router-dom";
 import { blogsAtom } from "../atom/blog";
-
-interface Blog{
-    id:string,
-    title:string,
-    content:string,
-    published:string,
-    createdAt:string
-}
+import { Blog } from "../atom/blog";
 
 export function useBlog({id}:{id:string}){
     const [isLogin, setIsLogin] = useRecoilState(isLoginAtom);
-    const [blogData, setBlogData] = useState<Blog>({id:'', title:'', content:'', published:'', createdAt:''});
+    const [blogData, setBlogData] = useState<Blog>({id:'', title:'', content:'', published:false, createdAt:'', author:{name:''}});
     const [loading, setLoading] = useState(false);
     const [token, setToken] = useRecoilState(tokenAtom);
     const navigate = useNavigate();
@@ -29,6 +22,7 @@ export function useBlog({id}:{id:string}){
             const headers = token?{token}:{}
             const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/blog/${id}`, {headers});
             if(res.data.success){
+                console.log(res.data.blog)
                 setBlogData(res.data.blog);
             }
         }

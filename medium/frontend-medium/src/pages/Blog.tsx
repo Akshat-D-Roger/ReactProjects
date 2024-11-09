@@ -1,15 +1,12 @@
 import { useParams } from "react-router-dom"
 import { useBlog } from "../store/hooks/useBlog";
 import {format} from 'date-fns'
-import { useRecoilValue } from "recoil";
-import { userAtom } from "../store/atom/login";
 import { Loading } from "../components/Loading";
 
 const Blog = () => {
 
   const id:string = useParams().id as string;
   const {blogData,loading} = useBlog({id});
-  const userData = useRecoilValue(userAtom);
 
   if(loading){
     return(
@@ -33,7 +30,7 @@ const Blog = () => {
           <div className="flex items-center gap-4">
             <div className="w-5 h-5 bg-gray-200 rounded-full shrink-0"></div>
             <div className="flex flex-col">
-              <div className="text-3xl font-semibold">{userData.name}</div>
+              <div className="text-3xl font-semibold">{blogData.author.name}</div>
               <div className="text-sm text-gray-600">Some random fact about the author...</div>
             </div>
           </div>
