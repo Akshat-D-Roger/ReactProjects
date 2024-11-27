@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div className='w-full px-[1rem] sm:px-[2rem] py-2 flex justify-between items-center border-b-2 border-slate-100'>
       <div className='flex '>
-        <NavLink to="/" className='prata-regular text-3xl font-semibold cursor-pointer'>Medium</NavLink>
+        <NavLink to="/" className='prata-regular text-3xl font-semibold cursor-pointer'>Bloggos</NavLink>
       </div>
       <div className='flex flex-row gap-2 sm:gap-4 items-center'>
         <Link to="/create" className='p-2 rounded-3xl bg-green-400 text-back'>Create</Link>
