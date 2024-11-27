@@ -22,7 +22,9 @@ const Blog = () => {
         <div className="md:basis-[75%]">
           <div className="text-5xl font-bold">{blogData.title}</div>
           <div className="mt-[0.3rem] text-gray-600 text-sm">Posted on {blogData.createdAt && format(new Date(blogData.createdAt),'MMMM dd, yyyy')}</div>
-          <div className="mt-[1.5rem]">{blogData.content}</div>
+          <div className="mt-[1.5rem]">
+            {(blogData.content).split('\n').map((item, index)=>(<p key={index}>{item}</p>))}
+          </div>
         </div>
         {/* for author */}
         <div className="md:basis-[25%] flex flex-col gap-2">
@@ -31,7 +33,7 @@ const Blog = () => {
             <div className="w-5 h-5 bg-gray-200 rounded-full shrink-0"></div>
             <div className="flex flex-col">
               <div className="text-3xl font-semibold">{blogData.author.name}</div>
-              <div className="text-sm text-gray-600">Some random fact about the author...</div>
+              <div className="text-sm text-gray-600">My motto: Being happy is what matters</div>
             </div>
           </div>
         </div>

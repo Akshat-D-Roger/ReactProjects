@@ -17,6 +17,7 @@ const Create = () => {
         const formData = new FormData(e.target as HTMLFormElement);
         const title = formData.get('title');
         const content = formData.get('content');
+        console.log(content);
         if(!title || !content){
             toast('Empty fields');
             return;
