@@ -1,4 +1,4 @@
-//npm install express, cors, validator (input validation from user), jsonwebtoken, dotenv (to access environment variables), 
+//npm install express, cors, zod (input validation from user), jsonwebtoken, dotenv (to access environment variables), 
 //bcrypt(encrypt password), nodemon (restart server on changes), cloudinary (for image storage on cloud)
 
 import express from 'express'
