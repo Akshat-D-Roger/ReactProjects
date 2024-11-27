@@ -15,14 +15,13 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className='flex justify-between items-center flex-nowrap flex-row py-5 gap-2'>
+            <div className='flex justify-between items-center flex-nowrap flex-row py-5 gap-2 border-b'>
                 <Link to="/" className=''>
                     <img className='w-36' src={assets.logo} alt='Forever' />
                 </Link>
                 <div className='mynav hidden md:flex flex-row flex-nowrap items-center gap-4 text-sm'>
                     <NavLink to="/">HOME</NavLink>
                     <NavLink to="/collections">COLLECTION</NavLink>
-                    <NavLink to="/about-us">ABOUT</NavLink>
                     <NavLink to="/contact-us">CONTACT</NavLink>
                 </div>
                 <div className='flex flex-row flex-nowrap gap-4'>
@@ -33,7 +32,7 @@ const Navbar = () => {
                             <img className='size-5 cursor-pointer' src={assets.profile_icon} alt="profile-icon" />
                             <div className='hidden group-hover:block absolute right-0 pt-4'>
                                 <div className='flex flex-col gap-2 py-3 px-5 bg-slate-100 text-gray-500 rounded:sm'>
-                                    <div className='font-semibold hover:text-black whitespace-nowrap'>Source Code</div>
+                                    <a href="https://github.com/Akshat-D-Roger/bitwyre-frontend-interview" target="_blank" className='font-semibold hover:text-black whitespace-nowrap'>Source Code</a>
                                     <Link to="/orders" className='font-semibold hover:text-black'>Orders</Link>
                                     <div onClick={() => logout(setIsLogin, setToken, navigate)} className='font-semibold hover:text-black cursor-pointer'>Logout</div>
                                 </div>
@@ -57,12 +56,9 @@ const Navbar = () => {
                 <div className='flex flex-col font-semibold'>
                     <NavLink onClick={() => (setVisible(false))} className="py-2 pl-6 border-b-2 text-gray-600" to="/">HOME</NavLink>
                     <NavLink onClick={() => (setVisible(false))} className="py-2 pl-6 border-b-2 text-gray-600" to="/collections">COLLECTION</NavLink>
-                    <NavLink onClick={() => (setVisible(false))} className="py-2 pl-6 border-b-2 text-gray-600" to="/about-us">ABOUT</NavLink>
                     <NavLink onClick={() => (setVisible(false))} className="py-2 pl-6 border-b-2 text-gray-600" to="/contact-us">CONTACT</NavLink>
                 </div>
             </div>
-
-
         </div>
     )
 }

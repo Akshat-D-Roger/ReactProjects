@@ -2,24 +2,22 @@ import { cartDataSelector, cartItemsAtom } from "../store/atoms/cart"
 import { deleteProduct, itemQuantityHandler } from "../store/cartChanges";
 import { useRecoilState, useRecoilValue } from "recoil"
 import { assets } from "../assets/assets";
-import { ToastContainer } from "react-toastify";
 import CartTotal from "../components/CartTotal";
 import { NavLink } from "react-router-dom";
 import { isLoginAtom, tokenAtom } from "../store/atoms/isLogin";
+import Title from "../components/Title";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useRecoilState(cartItemsAtom);
-  const {allItems} = useRecoilValue(cartDataSelector);
+  const {allItems, length} = useRecoilValue(cartDataSelector);
   const isLogin = useRecoilValue(isLoginAtom)
   const token = useRecoilValue(tokenAtom)
 
   return (
     <div className="w-full border-t-[1px] pt-[2rem] mb-[10rem] flex flex-col gap-[5rem]">
       <div className="flex flex-col gap-[2rem]">
-        <div className='flex flex-wrap items-center gap-2'>
-          <div className='text-3xl text-gray-500'>YOUR</div>
-          <div className='text-3xl'>CART</div>
-          <hr className='w-11 border-0 bg-slate-600 h-[2px]' />
+        <div>
+          <Title firstName="YOUR" secondName="CART"/>
         </div>
         <div className="flex flex-col">
           {allItems.map((item, index) => {
@@ -37,7 +35,6 @@ const Cart = () => {
                 </div>
                 <div>
                   <input type="number" value={item.quantity} min={1} step={1} onChange={(e) => { itemQuantityHandler(e, item.id, item.size, cartItems, setCartItems, isLogin, token) }} className="w-10 border outline-none" />
-                  <ToastContainer />
                 </div>
                 <div>
                   <button onClick={() => { deleteProduct(item, cartItems, setCartItems, isLogin, token) }}>
@@ -49,12 +46,12 @@ const Cart = () => {
           })}
         </div>
       </div>
-      <div className="w-full flex justify-end">
+      {length>0 && <div className="w-full flex justify-end">
         <div className="w-full sm:w-2/5 flex flex-col gap-10">
           <CartTotal/> 
           <NavLink to="/place-order" className="p-2 px-4 bg-black text-white text-center w-full">Proceed To Checkout</NavLink>
         </div>
-      </div>
+      </div>}
     </div>
   )
 }

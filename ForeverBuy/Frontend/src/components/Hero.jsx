@@ -1,7 +1,8 @@
+import { NavLink } from 'react-router-dom'
 import { assets } from '../assets/assets'
 const Hero = () => {
   return (
-    <div className='border-[1px] border-black w-full flex flex-col sm:flex-row'>
+    <NavLink to="/collections" className='border-[1px] border-black w-full flex flex-col sm:flex-row'>
         <div className='flex flex-col items-center justify-center w-full sm:w-[50%] py-10 sm:py-0 '>
             <div className='flex flex-col font-semibold text-slate-600'>
                 <div className='flex gap-2 items-center'>
@@ -18,7 +19,7 @@ const Hero = () => {
         <div className='w-full sm:w-[50%]'>
             <img className="w-full" src={assets.hero_img} alt="hero-image" />
         </div>
-    </div>
+    </NavLink>
   )
 }
 

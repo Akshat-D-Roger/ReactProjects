@@ -1,12 +1,11 @@
 import { assets } from "../assets/assets"
+import Title from "../components/Title"
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center w-full border-t-[1px] pt-[2rem] mb-[10rem] gap-[5rem]">
-      <div className='flex flex-wrap items-center gap-2'>
-        <div className='text-3xl text-gray-500'>CONTACT</div>
-        <div className='text-3xl'>US</div>
-        <hr className='w-11 border-0 bg-slate-600 h-[2px]' />
+    <div className="flex flex-col items-center w-full pt-[2rem] mb-[10rem] gap-[5rem]">
+      <div className="flex justify-center">
+        <Title firstName="CONTACT" secondName="US"/>
       </div>
       <div className="flex flex-col md:flex-row md:items-center gap-5">
         <div>

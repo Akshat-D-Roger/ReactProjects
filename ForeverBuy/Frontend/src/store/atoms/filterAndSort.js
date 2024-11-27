@@ -38,7 +38,17 @@ const sortedItemsAtom = atom({
     default:[]
 })
 
+const minPriceAtom = atom({
+    key:'minPriceAtom',
+    default:''
+})
+
+const maxPriceAtom = atom({
+    key:'maxPriceAtom',
+    default:''
+})
 
 
 
-export {selectedFilterAtom,filterObject, filteredItemsAtom, selectedSortAtom ,sortedItemsAtom};
+
+export {selectedFilterAtom,filterObject, filteredItemsAtom, selectedSortAtom ,sortedItemsAtom, minPriceAtom, maxPriceAtom};

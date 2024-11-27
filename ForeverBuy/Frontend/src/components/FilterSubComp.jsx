@@ -1,7 +1,7 @@
 import { useRecoilState } from "recoil";
 import { selectedFilterAtom } from "../store/atoms/filterAndSort";
 
-const FilterComp = ({ item }) => {
+const FilterSubComp = ({ item }) => {
 
     const filterType = (Object.keys(item))[0];
     const filterValues = item[filterType];
@@ -40,4 +40,4 @@ const FilterComp = ({ item }) => {
     )
 }
 
-export default FilterComp
+export default FilterSubComp

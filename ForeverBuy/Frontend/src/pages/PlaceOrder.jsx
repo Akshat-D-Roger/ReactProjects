@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { assets } from "../assets/assets"
 import CartTotal from "../components/CartTotal"
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useRecoilValue, useResetRecoilState, useSetRecoilState } from "recoil";
 import { cartDataSelector, cartItemsAtom } from "../store/atoms/cart";
@@ -97,7 +97,6 @@ const PlaceOrder = () => {
               <input checked={paymentMethod===2} onChange={()=>paymentMethodHandler(2)} type="radio" name="payment-method" />
                 <div>CASH ON DELIVERY</div>
             </label>
-            <ToastContainer/>
           </div>
         </div>
         <button type="submit" className="bg-black w-full text-white text-center p-3">Place Order</button>

@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useSetRecoilState } from "recoil";
 import { isLoginAtom, tokenAtom } from "../store/atoms/isLogin";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 const Login = () => {
 
@@ -67,7 +67,6 @@ const Login = () => {
       <div className="mt-4 sm:mt-0">
         <button type="submit" className="bg-black p-3 px-12 text-white mt-[1rem]">{loginOrRegister==='Login' ? 'Sign In' : 'Sign Up'}</button>
       </div>
-      <ToastContainer/>
     </form>
   )
 }

@@ -1,5 +1,4 @@
 import { atom, selector } from "recoil";
-import axios from 'axios'
 
 // async function getProducts(){
 //     let products = await axios.get('http://localhost:4000/api/product/list');

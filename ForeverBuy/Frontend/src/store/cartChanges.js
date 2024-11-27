@@ -33,6 +33,7 @@ async function addToCart(id, selectedSize, currProduct, setSelectedSize, cartIte
         return;
       }
     }
+    toast('Product added to cart')
   }
   
   async function deleteProduct(item, cartItems, setCartItems, isLogin, token) {

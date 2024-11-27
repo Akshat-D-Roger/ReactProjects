@@ -24,7 +24,7 @@ const Footer = () => {
             </div> 
         </div>
         <div className="text-center text-sm py-[1rem]">
-            Copyright 2024@ akshat - All Right Reserved.
+            COPYRIGHT 2024 - AKSHAT - All Right Reserved.
         </div>
     </div>
   )

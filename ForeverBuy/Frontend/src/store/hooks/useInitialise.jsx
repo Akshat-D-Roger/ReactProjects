@@ -1,10 +1,10 @@
 import { useRecoilState, useSetRecoilState } from "recoil";
-import { productsAtom } from "./atoms/products";
+import { productsAtom } from "../atoms/products";
 import { useEffect } from "react";
 import axios from "axios";
-import { isLoginAtom, tokenAtom } from "./atoms/isLogin";
-import { cartItemsAtom } from "./atoms/cart";
-import { logout } from "./logout";
+import { isLoginAtom, tokenAtom } from "../atoms/isLogin";
+import { cartItemsAtom } from "../atoms/cart";
+import { logout } from "../logout";
 import { useNavigate } from "react-router-dom";
 //import { toast } from "react-toastify";
 
