@@ -25,6 +25,8 @@ const latestProductsSelector = selector({
     key:"latestProductsSelector",
     get: ({get})=>{
         const products = get(productsAtom);
+        if(products.length==0)
+        return [];
         return products.slice(0,10);
     }
 })
@@ -33,6 +35,8 @@ const bestSellersSelector = selector({
     key:"bestSellerssSelector",
     get:({get})=>{
         const products = get(productsAtom);
+        if(products.length==0)
+            return [];
         return (products.filter(item=>(item.bestSeller))).slice(0,5);
     }
 })
